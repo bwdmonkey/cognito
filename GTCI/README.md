@@ -55,3 +55,17 @@
 - hard: string anagrams [java](java/StringAnagrams.java)
 - hard: smallest window containing substring [java](java/MinimumWindowSubstring.java)
 - hard: words concatenation [java](java/WordConcatenation.java)
+
+## pattern two: two pointers
+
+### process
+
+1. TODO
+
+### tips
+
+- TODO
+
+### solutions
+
+- easy: pair with target sums [java]()
