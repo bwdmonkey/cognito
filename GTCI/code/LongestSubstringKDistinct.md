@@ -1,3 +1,6 @@
+# 
+ 
+```java
 import java.util.*;
 
 class LongestSubstringKDistinct {
@@ -24,3 +27,4 @@ class LongestSubstringKDistinct {
     return maxLen;
   }
 }
+```

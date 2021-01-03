@@ -1,3 +1,6 @@
+# 
+ 
+```java
 import java.util.*;
 
 class StringAnagrams {
@@ -38,3 +41,4 @@ class StringAnagrams {
     return resultIndices;
   }
 }
+```

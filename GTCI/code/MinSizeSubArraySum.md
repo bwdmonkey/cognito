@@ -1,3 +1,6 @@
+# 
+ 
+```java
 class MinSizeSubArraySum {
   public static int findMinSubArray(int S, int[] arr) {
     int i = 0; // window start
@@ -16,3 +19,4 @@ class MinSizeSubArraySum {
     return (minLen == Integer.MAX_VALUE) ? 0 : minLen;
   }
 }
+```

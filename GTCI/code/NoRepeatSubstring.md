@@ -1,3 +1,6 @@
+# 
+ 
+```java
 import java.util.*;
 
 class NoRepeatSubstring {
@@ -19,3 +22,4 @@ class NoRepeatSubstring {
     return maxLen;
   }
 }
+```

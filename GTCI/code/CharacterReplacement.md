@@ -1,3 +1,6 @@
+# 
+ 
+```java
 class CharacterReplacement {
   public static int findLength(String str, int k) {
     int i = 0; // window start
@@ -18,3 +21,4 @@ class CharacterReplacement {
     return maxLen;
   }
 }
+```

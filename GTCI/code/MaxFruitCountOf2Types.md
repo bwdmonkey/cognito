@@ -1,3 +1,6 @@
+# 
+ 
+```java
 import java.util.*;
 
 class MaxFruitCountOf2Types {
@@ -20,3 +23,4 @@ class MaxFruitCountOf2Types {
     return maxLen;
   }
 }
+```

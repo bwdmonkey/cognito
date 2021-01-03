@@ -1,3 +1,6 @@
+# 
+ 
+```java
 class MaxSumSubArrayOfSizeK {
   public static int findMaxSumSubArray(int k, int[] arr) {
     int i = 0; // window start
@@ -13,3 +16,4 @@ class MaxSumSubArrayOfSizeK {
     return maxSum;
   }
 }
+```

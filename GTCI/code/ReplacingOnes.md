@@ -1,3 +1,6 @@
+# 
+ 
+```java
 class ReplacingOnes {
   public static int findLength(int[] arr, int k) {
     int i = 0; // window start
@@ -18,3 +21,4 @@ class ReplacingOnes {
     return maxLen;
   }
 }
+```
