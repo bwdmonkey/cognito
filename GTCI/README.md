@@ -29,6 +29,15 @@
 
 ## pattern one: sliding window
 
+### process
+
+1. track of window start (typ. additional pointer) and end (typ. loop index)
+2. consider for things to track between different windows (frequency/index maps, sums, etc)
+3. consider the condition for expanding the window (typ. expand while no reason to shrink; window size must be k after expanding so must be end at k-1 the previous loop, etc)
+4. consider the condition for shrinking the window (window size must be K, unique chars, etc)
+
+### tips
+
 - window length = windowEnd - windowStart + 1
 - use frequency map for overlapping windows
 - use index map for non-overlapping windows
