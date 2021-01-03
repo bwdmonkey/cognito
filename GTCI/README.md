@@ -33,14 +33,16 @@
 - use frequency map for overlapping windows
 - use index map for non-overlapping windows
 
-- easy: maximum sum subarray of size K [java](GTCI/java/MaxSumSubArrayOfSizeK.java)
-- easy: smallest subarray with a given sum [java](GTCI/java/MinSizeSubArraySum.java)
-- medium: longest substring with k distinct characters [java](GTCI/java/LongestSubstringKDistinct.java)
-- medium: fruits into baskets [java](GTCI/java/MaxFruitCountOf2Types.java)
-- hard: no-repeat substring [java](GTCI/java/NoRepeatSubstring.java)
-- hard: longest substring with same letters after replacement [java](GTCI/java/CharacterReplacement.java)
-- hard: longest subarray with ones after replacement [java](GTCI/java/ReplacingOnes.java)
-- hard: permutation in a string [java](GTCI/java/StringPermutation.java)
-- hard: string anagrams [java](GTCI/java/StringAnagrams.java)
-- hard: smallest window containing substring [java](GTCI/java/MinimumWindowSubstring.java)
-- hard: words concatenation [java](GTCI/java/WordConcatenation.java)
+### solutions
+
+- easy: maximum sum subarray of size K [java](java/MaxSumSubArrayOfSizeK.java)
+- easy: smallest subarray with a given sum [java](java/MinSizeSubArraySum.java)
+- medium: longest substring with k distinct characters [java](java/LongestSubstringKDistinct.java)
+- medium: fruits into baskets [java](java/MaxFruitCountOf2Types.java)
+- hard: no-repeat substring [java](java/NoRepeatSubstring.java)
+- hard: longest substring with same letters after replacement [java](java/CharacterReplacement.java)
+- hard: longest subarray with ones after replacement [java](java/ReplacingOnes.java)
+- hard: permutation in a string [java](java/StringPermutation.java)
+- hard: string anagrams [java](java/StringAnagrams.java)
+- hard: smallest window containing substring [java](java/MinimumWindowSubstring.java)
+- hard: words concatenation [java](java/WordConcatenation.java)

@@ -8,3 +8,7 @@ a journal of my technical interview prep for the next ten months (est sep 2021)
 
 success = optimal perfect solution (time/space complexity)
 failed = not working or suboptimal solution
+
+## notes
+
+- [grokking the coding interview notes](GTCI/README.md)
