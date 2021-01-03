@@ -1,5 +1,5 @@
-# 
- 
+# longest subarray with ones after replacement (hard)
+
 ```java
 class ReplacingOnes {
   public static int findLength(int[] arr, int k) {

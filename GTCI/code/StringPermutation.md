@@ -1,5 +1,5 @@
-# 
- 
+# permutation in a string (hard)
+
 ```java
 import java.util.*;
 

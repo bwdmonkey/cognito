@@ -1,5 +1,5 @@
-# 
- 
+# smallest subarray with a given sum (easy)
+
 ```java
 class MinSizeSubArraySum {
   public static int findMinSubArray(int S, int[] arr) {

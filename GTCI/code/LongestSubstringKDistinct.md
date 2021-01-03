@@ -1,5 +1,5 @@
-# 
- 
+# longest substring with k distinct characters (medium)
+
 ```java
 import java.util.*;
 

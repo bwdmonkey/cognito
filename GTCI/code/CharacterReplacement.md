@@ -1,5 +1,5 @@
-# 
- 
+# longest substring with same letters after replacement (hard)
+
 ```java
 class CharacterReplacement {
   public static int findLength(String str, int k) {

@@ -1,5 +1,5 @@
-# 
- 
+# maximum sum subarray of size K (easy)
+
 ```java
 class MaxSumSubArrayOfSizeK {
   public static int findMaxSumSubArray(int k, int[] arr) {

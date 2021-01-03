@@ -44,17 +44,17 @@
 
 ### solutions
 
-- easy: maximum sum subarray of size K [java](java/MaxSumSubArrayOfSizeK.java)
-- easy: smallest subarray with a given sum [java](java/MinSizeSubArraySum.java)
-- medium: longest substring with k distinct characters [java](java/LongestSubstringKDistinct.java)
-- medium: fruits into baskets [java](java/MaxFruitCountOf2Types.java)
-- hard: no-repeat substring [java](java/NoRepeatSubstring.java)
-- hard: longest substring with same letters after replacement [java](java/CharacterReplacement.java)
-- hard: longest subarray with ones after replacement [java](java/ReplacingOnes.java)
-- hard: permutation in a string [java](java/StringPermutation.java)
-- hard: string anagrams [java](java/StringAnagrams.java)
-- hard: smallest window containing substring [java](java/MinimumWindowSubstring.java)
-- hard: words concatenation [java](java/WordConcatenation.java)
+- easy: maximum sum subarray of size K [code](code/MaxSumSubArrayOfSizeK.md)
+- easy: smallest subarray with a given sum [code](code/MinSizeSubArraySum.md)
+- medium: longest substring with k distinct characters [code](code/LongestSubstringKDistinct.md)
+- medium: fruits into baskets [code](code/MaxFruitCountOf2Types.md)
+- hard: no-repeat substring [code](code/NoRepeatSubstring.md)
+- hard: longest substring with same letters after replacement [code](code/CharacterReplacement.md)
+- hard: longest subarray with ones after replacement [code](code/ReplacingOnes.md)
+- hard: permutation in a string [code](code/StringPermutation.md)
+- hard: string anagrams [code](code/StringAnagrams.md)
+- hard: smallest window containing substring [code](code/MinimumWindowSubstring.md)
+- hard: words concatenation [code](code/WordConcatenation.md)
 
 ## pattern two: two pointers
 
@@ -68,4 +68,4 @@
 
 ### solutions
 
-- easy: pair with target sums [java]()
+- easy: pair with target sums [code]()
