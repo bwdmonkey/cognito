@@ -81,3 +81,6 @@
 - medium: triplet sum close to target [code](code/TripletSumCloseToTarget.md)
 - medium: triplets with smaller sum [code](code/TripletWithSmallerSum.md)
 - medium: dutch national flag problem [code](code/DutchFlag.md)
+- medium: quadruple sum to target [code](code/QuadrupleSumToTarget.md)
+- medium: comparing strings containing backsapces [code](code/BackspaceCompare.md)
+- medium: minimum window sort [code](code/MinimumWindowSubstring.md)

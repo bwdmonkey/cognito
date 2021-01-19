@@ -12,3 +12,9 @@ failed = not working or suboptimal solution
 ## notes
 
 - [grokking the coding interview notes](GTCI/README.md)
+
+- [java quicknote](#java)
+
+## Java
+
+- init List with variable: `Arrays.asList(1,2,3,4)`
