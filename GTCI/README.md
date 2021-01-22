@@ -84,3 +84,31 @@
 - medium: quadruple sum to target [code](code/QuadrupleSumToTarget.md)
 - medium: comparing strings containing backsapces [code](code/BackspaceCompare.md)
 - medium: minimum window sort [code](code/MinimumWindowSubstring.md)
+
+## pattern three: fast and slow pointers
+
+### p2.process
+
+1.
+
+### p2.tips
+
+- `while (fast != null && fast.next != null) {}`
+- reversing LinkedList
+
+  ```java
+  private static ListNode reverse(ListNode head) {
+    ListNode prev = null;
+    while (head != null) {
+      ListNode next = head.next;
+      head.next = prev;
+      prev = head;
+      head = next;
+    }
+    return prev;
+  }
+  ```
+
+### p2.solutions
+
+- easy: linkedlist cycle [code]()
