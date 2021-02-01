@@ -87,11 +87,19 @@
 
 ## pattern three: fast and slow pointers
 
-### p2.process
+### p3.process
 
-1.
+```java
+ListNode slow = head;
+ListNode fast = head;
 
-### p2.tips
+while (fast != null && fast.next != null) {
+  slow = slow.next;
+  fast = fast.next.next;
+}
+```
+
+### p3.tips
 
 - `while (fast != null && fast.next != null) {}`
 - reversing LinkedList
@@ -109,6 +117,88 @@
   }
   ```
 
-### p2.solutions
+### p3.solutions
 
-- easy: linkedlist cycle [code]()
+- easy: linkedlist cycle [code](code/LinkedListCycle.md)
+- medium: start of linkedlist cycle [code](code/LinkedListCycleStart.md)
+- medium: happy number [code](code/HappyNumber.md)
+- easy: middle of the linkedlist [code](code/MiddleOfLinkedList.md)
+- medium: palindrome linkedlist [code](code/PalindromicLinkedList.md)
+- medium: rearrange a linkedlist [code](code/RearrangeList.md)
+- hard: cycle in a circular array [code](code/CircularArrayLoop.md)
+
+## pattern four: merge intervals
+
+### p4.process
+
+- sort the intervals by start time `Collections.sort(x, () -> -1)`
+- compare prev and curr intervals
+
+  - ```java
+      for (int i = 1; i < intervals.size(); i++) {
+        Interval prev = intervals.get(i-1);
+        Interval curr = intervals.get(i);
+        // care for inclusive or exclusive
+        if (curr.start <= prev.end) {
+          // these meetings overlap
+        } else {
+          // these meetings does not overlap
+        }
+      }
+      ```
+
+### p4.tips
+
+- use min heap (PriorityQueue) for tracking the earliest interval start time if input is `List<List<Interval>>` ie. multiple employee's schedule
+
+### p4.solutions
+
+- medium: merge intervals [code](code/MergeIntervals.md)
+- medium: insert interval [code](code/InsertInterval.md)
+- medium: intervals intersection [code](code/IntervalsIntersection.md)
+- medium: conflicting appointments [code](code/ConflictingAppointments.md)
+- hard: minimum meeting rooms [code](code/MinimumMeetingRooms.md)
+- hard: maximum CPU load [code](code/MaximumCPULoad.md)
+- hard: employee free time [code](code/EmployeeFreeTime.md)
+
+## pattern five: cyclic sorts
+
+### p5.process
+
+0. array must contain elements that are naturally indexable (`[1,2,3,4]`)
+1. cyclic sort
+    - note: unsortable numbers (out of range or negative index) will fill empty indexes or go to the end
+
+    - ```java
+      int i = 0;
+      while (i < nums.length) {
+        // if (condition to include in sort       && cur_num != expected_num)
+        if (nums[i] > 0 && nums[i] <= nums.length && nums[i] != nums[nums[i] - 1])
+          swap(nums, i, nums[i] - 1);
+        else
+          i++;
+      }
+      ```
+
+2. iterate the 'sorted array'
+
+    - ```java
+      List<Integer> missingNumbers = new ArrayList<>();
+      Set<Integer> extraNumbers = new HashSet<>();
+      for (i = 0; i < nums.length && missingNumbers.size() < k; i++)
+        if (nums[i] != i + 1) {
+          missingNumbers.add(i + 1);
+          extraNumbers.add(nums[i]);
+        }
+      ```
+
+### p5.solutions
+
+- easy: cyclic sort [code](code/CyclicSort.md)
+- easy: find the missing number [code](code/MissingNumber.md)
+- easy: find all missing numbers [code](code/AllMissingNumbers.md)
+- easy: find the duplicate number [code](code/FindDuplicate.md)
+- easy: find all duplicate numbers [code](code/FindAllDuplicate.md)
+- easy: find the corrupt pair [code](code/FindCorruptNums.md)
+- medium: find the smallest missing positive number [code](code/FirstSmallestMissingPositive.md)
+- hard: find the first K missing positive numbers [code](code/FirstKMissingPositive.md)
