@@ -70,6 +70,34 @@ class Solution {
 }
 ```
 
+## my solution 2 (accepted, ashamed at least 4 hours)
+
+```java
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int N = nums.length;
+        boolean containsN = false;
+
+        for (int i = 0; i < N; i++) {
+            if (nums[i] == N)
+                containsN = true;
+            if (nums[i] <= 0 || nums[i] >= N) {
+                nums[i] = 0;
+                containsZero = true;
+            }
+        }
+
+        for (int i = 0; i < N; i++)
+            nums[nums[i] % N] += N;
+        for (int i = 1; i < N; i++)
+            if (nums[i] / N == 0)
+                return i;
+
+        return (containsN) ? N + 1 : N;
+    }
+}
+```
+
 ## Possible Follow-ups
 
 1. How would you modify your code to output the first two positive values?

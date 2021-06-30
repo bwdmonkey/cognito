@@ -27,7 +27,70 @@ Output: [1, 2]
 Explanation: The smallest missing positive numbers are 1 and 2.
 ```
 
-## my solution (wrong)
+## my solution
+
+```java
+/**
+ * This solution wouldn't work in Java as the input array cannot be appended to.
+ */
+import java.util.*;
+
+class FirstKMissingPositive {
+
+  public static List<Integer> findNumbers(int[] nums, int k) {
+    List<Integer> missingNumbers = new ArrayList<>();
+    int N = nums.length;
+    boolean containsN = false;
+    for (int i = 0; i < N; i++) {
+      if (nums[i] == N)
+        containsN = true;
+      if (nums[i] <= 0 || nums[i] >= N)
+        nums[i] = 0;
+    }
+
+    for (int i = 0; i < N; i++)
+      nums[nums[i] % N] += N;
+    for (int i = 1; i < N; i++) {
+      if (nums[i] / N == 0) {
+        missingNumbers.add(i);
+        if (missingNumbers.size() == k)
+          return missingNumbers;
+      }
+    }
+
+    while (missingNumbers.size() < k) {
+      missingNumbers.add((containsN) ? N + 1 : N);
+      N++;
+    }
+
+    return missingNumbers;
+  }
+}
+```
+
+```python
+def find_first_k_missing_positive(nums, k):
+  missingNumbers = []
+  for i in range(k):
+    nums.append(0)
+  n = len(nums)
+  for i in range(len(nums)): #delete those useless elements
+    if nums[i]<0 or nums[i]>=n:
+      nums[i]=0
+  for i in range(len(nums)): #use the index as the hash to record the frequency of each number
+    nums[nums[i]%n]+=n
+  for i in range(1,len(nums)):
+    if nums[i]//n == 0:
+      missingNumbers.append(i)
+      if (len(missingNumbers) == k):
+        return missingNumbers
+  while (len(missingNumbers) < k):
+    missingNumbers.append(n)
+    n += 1;
+  return missingNumbers
+```
+
+## solution
 
 ```java
 import java.util.*;
@@ -37,38 +100,49 @@ class FirstKMissingPositive {
   public static List<Integer> findNumbers(int[] nums, int k) {
     int i = 0;
     while (i < nums.length) {
-      int j = nums[i] - 1;
-      if (nums[i] > 0 && nums[i] < nums.length && nums[i] != nums[j]) {
-        swap(nums, i, j);
-      } else {
+      if (nums[i] > 0 && nums[i] <= nums.length && nums[i] != nums[nums[i] - 1])
+        swap(nums, i, nums[i] - 1);
+      else
         i++;
-      }
     }
 
-    int i = 0; // 1 to inf counter
-    int j = 0; // nums positive number index
     List<Integer> missingNumbers = new ArrayList<>();
-    while (missingNumbers.size() < k) {
-      if (j < nums.length && nums[j] <= 0) {
-        j++;
-      }
-      if (j < nums.length && nums[j] == i + 1) {
-        i++;
-        j++;
-        continue;
-      }
-      if (i < nums.length && nums[i] != i + 1) {
+    Set<Integer> extraNumbers = new HashSet<>();
+    for (i = 0; i < nums.length && missingNumbers.size() < k; i++)
+      if (nums[i] != i + 1) {
         missingNumbers.add(i + 1);
+        extraNumbers.add(nums[i]);
       }
-      i++;
+
+    // add the remaining missing numbers
+    for (i = 1; missingNumbers.size() < k; i++) {
+      int candidateNumber = i + nums.length;
+      // ignore if the array contains the candidate number
+      if (!extraNumbers.contains(candidateNumber))
+        missingNumbers.add(candidateNumber);
     }
+
     return missingNumbers;
   }
 
-  public static void swap(int[] nums, int i, int j) {
-    int tmp = nums[i];
-    nums[i] = nums[j];
-    nums[j] = tmp;
+  private static void swap(int[] arr, int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+
+  public static void main(String[] args) {
+    List<Integer> missingNumbers = FirstKMissingPositive.findNumbers(new int[] { 3, -1, 4, 5, 5 }, 3);
+    System.out.println("Missing numbers: " + missingNumbers);
+
+    missingNumbers = FirstKMissingPositive.findNumbers(new int[] { 2, 3, 4 }, 3);
+    System.out.println("Missing numbers: " + missingNumbers);
+
+    missingNumbers = FirstKMissingPositive.findNumbers(new int[] { -2, -3, 4 }, 2);
+    System.out.println("Missing numbers: " + missingNumbers);
   }
 }
+
+
+
 ```
